@@ -1,0 +1,13 @@
+<html>
+{% load static %}
+<head><title>update Tasks</title></head>
+<body>
+<h1> Edit Task</h1>
+<form  method = "POST">
+{% csrf_token %}
+Task Name : <input type = text" name="tname" value="{{task.tname}}"></br>
+Task Detail : <input type = text" name="tDetails" value="{{task.tDetails}}"></br>
+<input type = "submit" value = "update Task">
+</form>
+</body>
+</html>

@@ -1,0 +1,106 @@
+input[type=submit], .hbtn {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  margin : 8px 3px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover, .hbtn:hover, .btn:hover{
+  background-color: #45a049;
+}
+
+.frm{
+position:relative;
+left:6px;
+margin-bottom:10px;
+}
+.form-group{
+	position:relative;
+	left:10px;
+	font-size:15px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	width:300px;
+	height:100px;
+}
+.btn , .dbtn {
+border-radius: 4px;
+background-color: #4CAF50;
+border: 1px;
+padding: 5px;
+}
+
+.dbtn:hover{
+background-color: #FE012B;
+}
+a:link { text-decoration: none; 
+color:white;}
+
+.container{
+position: relative;
+left : 1020px;
+width : 4%;
+height : 7%;
+}
+.over{
+  opacity: 0; 
+   transition: .5s ease;
+}
+.container:hover .over {
+  opacity: 1;
+}
+.txt{
+	color: black;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-size: 20px;
+}
+img{
+ border-radius: 15%;
+ width : 30px;
+ border-style : none;
+}
+#Tasks {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#Tasks td, #Tasks th {
+	text-align : center;
+	padding: 8px;
+	font-size : 12px;
+}
+#Tasks th{
+ border: 1px solid #ddd;
+ font-size : 15px;
+}
+#Tasks tr:nth-child(even){background-color: #f2f2f2;}
+
+#Tasks tr:hover {background-color: #ddd;}
+
+#Tasks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04AA6D;
+  color: white;
+}
+
+#cTasks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #FFA500;
+  color: white;
+}
+
+
+
+
+

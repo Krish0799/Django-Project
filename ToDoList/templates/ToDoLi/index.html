@@ -1,0 +1,52 @@
+<html>
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/style.css' %}?{% now "U" %}">
+
+<head><title>View Tasks</title></head>
+<body>
+<div>
+<h1> Task Details</h1>
+</div>
+<table id = "Tasks">
+ <thead><th>Task Name</th><th>Details</th><th></th> </thead>
+	<tr>
+	{% for t in task %}
+		<td>{{t.tname}}</td>
+		<td>{{t.tDetails}}<td>
+		<button class="btn"><a href = "/markdone/{{t.id}}">Mark As Done </a></button><button class="btn" style="margin-left:3px">  <a href="update/{{t.id}}"> Update</a></button></br>
+	</tr>
+	{% empty %}
+	<tr><td colspan="3">No Tasks</td></tr>
+	{% endfor %}
+	
+</table></br>
+<div  class = "container" style="text-align: left">
+	<a   href="create/" >
+		<img src="{% static 'images/add.png' %}" border = "0" alt="Add" ></a>
+		<div class="over"> 
+			<div class = "txt">
+				Add Task
+			</div>
+		</div>
+</div>
+<h1>Completed Tasks</h1>
+
+<table id ="Tasks">
+ <thead id  ="cTasks">
+	<th>Task Name</th>
+	<th>Task Details</th> <th></th></thead>
+	<tr>
+	{% for ct in ctask %}
+		<td>{{ct.ctname}}</td>
+		<td>{{ct.ctDetails}}<td>
+		<button class="dbtn" ><a href = "/delete/{{ct.id}}"> Delete </a></button>
+	</tr>
+	{% empty %}
+	<tr><td colspan="3">No Tasks</td></tr>
+	{% endfor %}
+</table>
+
+
+</body>
+
+</html>
