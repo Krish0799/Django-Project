@@ -1,0 +1,28 @@
+<html>
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/style.css' %}?{% now "U" %}">
+
+<head><title>View Tasks</title></head>
+<body>
+<div style="background-color:  #666; width: 100%;height: 20%;border-radius:4px;">
+<h1 style="text-align: center;position:relative;top:40px;font-size:20px;color:white;"> To Do List</h1>
+</div>
+</br>
+<section>
+<nav><div style="padding:0;"><a class="navbtn" href = "/ToDoList/completed/{{t.id}}">Completed</a></div></nav>
+<div class = "main">
+<h1 class="idxhead"	>{{task.tname}} Task</h1>
+</br>
+<div >
+	<h2> Details</h2>
+<p >{{task.tDetails}}</p>
+<button class ="btn"><a  href = "/ToDoList/">back</a></button>
+<button class="btn"><a href = "/ToDoList/markdone/{{task.id}}">Mark As Done </a></button><button class="btn" style="margin-left:3px">  <a href="/ToDoList/detail_update/{{task.id}}"> Update</a></button><button class="dbtn" style="margin-left:3px" ><a href = "/ToDoList/delete/{{task.id}}"> Delete </a></button>
+</div>
+</br>
+</div>
+
+</section>
+</body>
+
+</html>

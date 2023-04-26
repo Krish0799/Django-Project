@@ -1,4 +1,4 @@
-"""ToDoList URL Configuration
+"""FirstPrj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -13,14 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+#auth
 from django.contrib import admin
-from django.urls import path, include
-
+from django.urls import path
+from authentication import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-	path('',include('authentication.urls')),
-	path('ToDoList/',include('ToDoLi.urls')),
-	
-	
+	path('login/',views.login_view),
+    path('',views.login_view),
+    path('signup/',views.signup),
 ]

@@ -1,12 +1,19 @@
 <html>
 {% load static %}
+{% load filter %}
+
+<link rel="stylesheet" href='{% static 'css/style.css' %}?{% now "U" %}'>
 <head><title>update Tasks</title></head>
-<body>
+<body style ="font-family:Arial, Helvetica, sans-serif;">
 <h1> Edit Task</h1>
-<form  method = "POST">
+<form  method = "POST" class = "form-group">
 {% csrf_token %}
-Task Name : <input type = text" name="tname" value="{{task.tname}}"></br>
-Task Detail : <input type = text" name="tDetails" value="{{task.tDetails}}"></br>
+Task Name : <input  style="margin-bottom:8px;" type = "text" name="tname" value="{{task.tname}}"></br>
+Task Detail : <input  style="margin-left:2px;" type = "text" name="tDetails" value="{{task.tDetails}}"></br>
+<a class ="hbtn" href = "/ToDoList/">Cancle</a>
+{% if Condition %}
+<a class ="hbtn" href = "/ToDoList/details/{{task.id}}">back</a>
+{% endif %}
 <input type = "submit" value = "update Task">
 </form>
 </body>

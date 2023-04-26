@@ -5,6 +5,7 @@ class TaskForm(forms.ModelForm):
 	class Meta:
 		model = Task
 		fields = '__all__'
+		exclude = ['tuser']
 		widgets={
 			'tname' : forms.TextInput(attrs={'placeholder':''})
 		}

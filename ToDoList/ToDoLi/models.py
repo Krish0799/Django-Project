@@ -4,7 +4,9 @@ from django.db import models
 class Task(models.Model):
 	tname = models.CharField(max_length=10)
 	tDetails = models.CharField(max_length=100)
+	tuser = models.IntegerField()
 	
 class CompletedTask(models.Model):
 	ctname = models.CharField(max_length=10)
 	ctDetails = models.CharField(max_length=100)
+	ctuser = models.IntegerField()

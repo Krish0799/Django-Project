@@ -1,0 +1,35 @@
+<html>
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/style.css' %}?{% now "U" %}">
+
+<head><title>View Tasks</title></head>
+<body>
+<div style="background-color:  #666; width: 100%;height: 20%;border-radius:4px;">
+<h1 style="text-align: center;position:relative;top:40px;font-size:20px;color:white;"> To Do List</h1>
+</div>
+</br>
+<section>
+<nav><div ><a class="navbtn"  href = "/ToDoList/">Home</a></div></nav>
+<div class = "main">
+<h1 class="idxhead">Completed Tasks</h1>
+<table id ="Tasks">
+ <thead id  ="cTasks">
+	<th>Task Name</th>
+	<th>Task Details</th> <th></th></thead>
+	<tr>
+	{% for ct in ctask %}
+		<td>{{ct.ctname}}</td>
+		<td>{{ct.ctDetails}}</td>
+		<td><button class="dbtn" ><a href = "/ToDoList/delete/{{ct.id}}"> Delete </a></button></td>
+	</tr>
+	{% empty %}
+	<tr><td colspan="3">No Tasks</td></tr>
+	{% endfor %}
+</table>
+<div class="idxhead"><a class="btn" href = "/ToDoList/">back</a></div>
+</br>
+</div>
+</section>
+</body>
+
+</html>
