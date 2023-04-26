@@ -1,8 +1,11 @@
+{% load static %}
 <html>
 <head> <title> Demo </title>
+<link rel="stylesheet" href="{% static 'css/image.css' %}">
 </head?
-<body>
+<body >
 <h1> Demo Template</h1>
 {{greet}} {{dateTime}}
+<img src="{% static 'images/funny.jpg' %}" alt="image">
 </body>
 </html>
